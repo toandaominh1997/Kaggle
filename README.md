@@ -5,11 +5,21 @@ Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
  | Check [our project Board](https://github.com/toandaominh1997/kaggle/projects/2)
  | [Ask us on Discord][discord] | Support us on [Patreon](https://github.com/toandaominh1997)
 
-[![][circleci img]][circleci]
-[![][maven img]][maven]
-[![](https://jitpack.io/v/Hexworks/Zircon.svg)](https://jitpack.io/#Hexworks/Zircon)
-[![][license img]][license]
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![chat][chat-badge]][chat]
+[![Build Status][build-badge]][build]
+[![version][version-badge]][package]
+[![MIT License][license-badge]][LICENSE]
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors)
+[![PRs Welcome][prs-badge]][prs]
+[![Implementations][implementations-badge]][implementations]
+[![Donate][donate-badge]][donate]
+[![Code of Conduct][coc-badge]][coc]
+
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
+[![Tweet][twitter-badge]][twitter]
+
 
 ---
 
@@ -23,6 +33,8 @@ Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
 - [Backers](#backers-)
 - [Sponsors](#sponsors-)
 - [Acknowledgments](#acknowledgments)
+- [Contributors](#contributors)
+- [License](#license)
 
 
 
