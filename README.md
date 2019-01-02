@@ -2,7 +2,7 @@
 
 Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
  | or [Create an issue](https://github.com/toandaominh1997/kaggle/issues/new)
- | Check [our project Board](https://github.com/toandaominh1997/kaggle/projects/2)
+ | Check [our project Board](https://github.com/toandaominh1997/kaggle/projects)
  | [Ask us on Discord][discord] | Support us on [Toandaominh1997](https://github.com/toandaominh1997)
 
 [![chat][chat-badge]][chat]
