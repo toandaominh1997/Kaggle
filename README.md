@@ -1,8 +1,4 @@
-# Kaggle [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Do%20you%20plan%20to%20make%20a%20roguelike%3F%20Look%20no%20further.%20Zircon%20is%20the%20right%20tool%20for%20the%20job.&url=https://github.com/Hexworks/zircon&hashtags=games,roguelikes)
-
-<img src="https://cdn.discordapp.com/attachments/205245036084985857/481213000540225550/full_example.gif" />
-
----
+# Kaggle
 
 Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
  | or [Create an issue](https://github.com/toandaominh1997/kaggle/issues/new)
