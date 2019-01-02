@@ -3,7 +3,7 @@
 Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
  | or [Create an issue](https://github.com/toandaominh1997/kaggle/issues/new)
  | Check [our project Board](https://github.com/toandaominh1997/kaggle/projects/2)
- | [Ask us on Discord][discord] | Support us on [Patreon](https://github.com/toandaominh1997)
+ | [Ask us on Discord][discord] | Support us on [Toandaominh1997](https://github.com/toandaominh1997)
 
 [![chat][chat-badge]][chat]
 [![Build Status][build-badge]][build]
@@ -76,11 +76,11 @@ Github Changelog Generator is released under the [MIT License](http://www.openso
 [implementations-badge]: https://img.shields.io/badge/%F0%9F%92%A1-implementations-8C8E93.svg?style=flat-square
 [implementations]: https://github.com/kentcdodds/all-contributors/blob/master/other/IMPLEMENTATIONS.md
 [github-watch-badge]: https://img.shields.io/github/watchers/kentcdodds/all-contributors.svg?style=social
-[github-watch]: https://github.com/kentcdodds/all-contributors/watchers
+[github-watch]: https://github.com/toandaominh1997/Kaggle/watchers
 [github-star-badge]: https://img.shields.io/github/stars/kentcdodds/all-contributors.svg?style=social
-[github-star]: https://github.com/kentcdodds/all-contributors/stargazers
+[github-star]: https://github.com/toandaominh1997/Kaggle/stargazers
 [twitter]: https://twitter.com/intent/tweet?text=Check%20out%20all-contributors!%20%E2%9C%A8%20Recognize%20all%20contributors,%20not%20just%20the%20ones%20who%20commit%20code%20%E2%9C%A8%20https://github.com/kentcdodds/all-contributors%20%F0%9F%A4%97
 [twitter-badge]: https://img.shields.io/twitter/url/https/github.com/kentcdodds/all-contributors.svg?style=social
-[emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
-[all-contributors]: https://github.com/kentcdodds/all-contributors
+[emojis]: https://github.com/toandaominh1997/Kaggle/#emoji-key
+[all-contributors]: https://github.com/toandaominh1997/Kaggle
 
