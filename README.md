@@ -75,9 +75,9 @@ Github Changelog Generator is released under the [MIT License](http://www.openso
 [coc]: https://github.com/kentcdodds/all-contributors/blob/master/other/CODE_OF_CONDUCT.md
 [implementations-badge]: https://img.shields.io/badge/%F0%9F%92%A1-implementations-8C8E93.svg?style=flat-square
 [implementations]: https://github.com/kentcdodds/all-contributors/blob/master/other/IMPLEMENTATIONS.md
-[github-watch-badge]: https://img.shields.io/github/watchers/kentcdodds/all-contributors.svg?style=social
+[github-watch-badge]: https://img.shields.io/github/watchers/toandaominh1997/Kaggle.svg?style=social
 [github-watch]: https://github.com/toandaominh1997/Kaggle/watchers
-[github-star-badge]: https://img.shields.io/github/stars/kentcdodds/all-contributors.svg?style=social
+[github-star-badge]: https://img.shields.io/github/stars/toandaominh1997/Kaggle.svg?style=social
 [github-star]: https://github.com/toandaominh1997/Kaggle/stargazers
 [twitter]: https://twitter.com/intent/tweet?text=Check%20out%20all-contributors!%20%E2%9C%A8%20Recognize%20all%20contributors,%20not%20just%20the%20ones%20who%20commit%20code%20%E2%9C%A8%20https://github.com/kentcdodds/all-contributors%20%F0%9F%A4%97
 [twitter-badge]: https://img.shields.io/twitter/url/https/github.com/kentcdodds/all-contributors.svg?style=social
