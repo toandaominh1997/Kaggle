@@ -27,6 +27,7 @@ Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Template Code](#template-code)
 - [Feedback](#feedback)
 - [Contributors](#contributors)
 - [Build Process](#build-process)
@@ -42,6 +43,34 @@ Need info? Check the [Wiki](https://github.com/toandaominh1997/kaggle/wiki)
 
 
 ## Features
+
+## Template Code
+
+### LightGBM
+
+``` python
+import lightgbm as lgb
+
+
+params = {'learning_rate': 0.2,
+              'application': 'binary',
+              'num_leaves': 31,
+              'verbosity': -1,
+              'metric': 'auc',
+              'data_random_seed': 2,
+              'bagging_fraction': 0.8,
+              'feature_fraction': 0.6,
+              'nthread': 4,
+              'lambda_l1': 1,
+              'lambda_l2': 1}
+train_data = lgb.Dataset(X_train, label=y_train)
+val_data = lgb.Dataset(X_val, label=y_val)
+watchlist = [train_data, val_data]
+
+model_lgb = lgb.train(params, train_set=d_train, valid_sets=watchlist)
+
+y_pred = model_lgb.predict(X_test)
+```
 
 
 ## Feedback
