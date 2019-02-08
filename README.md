@@ -171,6 +171,26 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None,
     return plt
 
 ```
+### 3. Cross Validation
+```python
+def cross_validation(train, target, test, model, folds, N_FOLDS=10):
+    oof = np.zeros(len(train))
+    sub = np.zeros(len(test))
+    scores = [0 for _ in range(folds.n_splits)]
+    for fold_, (train_index, val_index) in enumerate(folds.split(X, y)):
+        if(isinstance(X,(pd.core.frame.DataFrame))):
+            X_train, y_train = train.loc[train_index], y.loc[train_index]
+            X_val, y_val = train.loc[val_index], y.loc[val_index]
+        model.fit(X_train, y_train)
+        oof[val_idx] = model.predict(X_val)
+        sub += model.predict(test)/folds.n_splits
+        scores[fold_] = roc_auc_score(y[val_index], oof[val_index])
+        print("Fold {}: {}".format(fold_+1, round(scores[fold_],5)))
+    print("CV score(auc): {:<8.5f}, (std: {:<8.5f})".format(roc_auc_score(y, oof), np.std(scores)))
+folds = StratifiedKFold(n_splits=N_FOLDS, shuffle=True, random_state=42)
+clf = LogisticRegression(C=13.0)
+cross_validation(train=X, target=y, test=test, model=clf, folds=folds)    
+```
 ## Template Code
 
 ### LightGBM
