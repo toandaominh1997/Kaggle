@@ -247,7 +247,73 @@ model = lightgbmcv(X, y, params=params)
 
 y_pred = model.predict(test)
 ```
+### 1.2 LightGBM Cross Validation
+``` python
+params = {
+    'learning_rate': 0.2,
+    'application': 'binary',
+    'num_boost_round': 100,
+    'nfold': 5,
+    'num_leaves': 31,
+    'verbosity': -1,
+    'metric': 'auc',
+    'data_random_seed': 2,
+    'bagging_fraction': 0.8,
+    'feature_fraction': 0.6,
+    'nthread': 4,
+    'lambda_l1': 1,
+    'lambda_l2': 1,
+    'early_stopping_rounds': 40,
+}
+def lightgbmcv(train, target, params):
+    train_data=lgb.Dataset(train, label=target)
+    model_lgbcv = lgb.cv(params, train_set=train_data)
+    return model_lgbcv
+model = lightgbmcv(X, y, params=params)
+```
 
+### 2.1 XGBoost
+```python
+params = {
+    'learning_rates': 0.2,
+    'eta': 0.02, 
+    'max_depth': 10, 
+    'subsample': 0.7, 
+    'colsample_bytree': 0.7, 
+    'objective': 'binary:logistic', 
+    'seed': 99, 
+    'silent': 1, 
+    'eval_metric':'auc', 
+    'nthread':4}
+
+def xgboost(train, target, early_stopping_rounds=10, test_size=0.2):
+    X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=test_size, random_state=42)
+    xgb_train = xgb.DMatrix(train, label=target)
+    model = xgb.train(params, xgb_train, verbose_eval=1)
+    return model
+xgboost(X, y)
+
+```
+### 2.2 XGBoost with Cross Validation
+``` python
+params = {
+    'learning_rates': 0.2,
+    'eta': 0.02, 
+    'max_depth': 10, 
+    'subsample': 0.7, 
+    'colsample_bytree': 0.7, 
+    'objective': 'binary:logistic', 
+    'seed': 99, 
+    'silent': 1, 
+    'eval_metric':'auc', 
+    'nthread':4}
+
+def xgboostcv(train, target, nfold=5, early_stopping_rounds=10):
+    xgb_train = xgb.DMatrix(train, label=target)
+    model = xgb.cv(params, xgb_train, 5000, nfold=nfold, early_stopping_rounds=early_stopping_rounds, verbose_eval=1)
+    return model
+xgboostcv(X, y)
+```
 
 ## Feedback
 
