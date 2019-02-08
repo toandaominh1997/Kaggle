@@ -196,30 +196,56 @@ cross_validation(train=X, target=y, test=test, model=clf, folds=folds)
 ```
 ## Template Code
 
-### LightGBM
+### 1. LightGBM
 
 ``` python
 import lightgbm as lgb
 
 
-params = {'learning_rate': 0.2,
-              'application': 'binary',
-              'num_leaves': 31,
-              'verbosity': -1,
-              'metric': 'auc',
-              'data_random_seed': 2,
-              'bagging_fraction': 0.8,
-              'feature_fraction': 0.6,
-              'nthread': 4,
-              'lambda_l1': 1,
-              'lambda_l2': 1}
-train_data = lgb.Dataset(X_train, label=y_train)
-val_data = lgb.Dataset(X_val, label=y_val)
-watchlist = [train_data, val_data]
+params = {
+    'learning_rate': 0.2,
+    'application': 'binary',
+    'num_leaves': 31,
+    'verbosity': -1,
+    'metric': 'auc',
+    'data_random_seed': 2,
+    'bagging_fraction': 0.8,
+    'feature_fraction': 0.6,
+    'nthread': 4,
+    'lambda_l1': 1,
+    'lambda_l2': 1}
+def lightgbm(train, target, params, test_size=0.2):
+    X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=test_size, random_state=42)
+    train_data = lgb.Dataset(X_train, label=y_train)
+    val_data = lgb.Dataset(X_test, label=y_test)
+    watchlist = [train_data, val_data]
+    model_lgb = lgb.train(params, train_set=train_data, valid_sets=watchlist)
+    return model_lgb
+model = lightgbm(train=X, target=y, params=params)
 
-model_lgb = lgb.train(params, train_set=d_train, valid_sets=watchlist)
+params = {
+    'learning_rate': 0.2,
+    'application': 'binary',
+    'num_boost_round': 100,
+    'nfold': 5,
+    'num_leaves': 31,
+    'verbosity': -1,
+    'metric': 'auc',
+    'data_random_seed': 2,
+    'bagging_fraction': 0.8,
+    'feature_fraction': 0.6,
+    'nthread': 4,
+    'lambda_l1': 1,
+    'lambda_l2': 1,
+    'early_stopping_rounds': 40,
+}
+def lightgbmcv(train, target, params):
+    train_data=lgb.Dataset(train, label=target)
+    model_lgbcv = lgb.cv(params, train_set=train_data)
+    return model_lgbcv
+model = lightgbmcv(X, y, params=params)
 
-y_pred = model_lgb.predict(X_test)
+y_pred = model.predict(test)
 ```
 
 
