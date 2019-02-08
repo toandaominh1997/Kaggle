@@ -181,6 +181,9 @@ def cross_validation(train, target, test, model, folds, N_FOLDS=10):
         if(isinstance(X,(pd.core.frame.DataFrame))):
             X_train, y_train = train.loc[train_index], y.loc[train_index]
             X_val, y_val = train.loc[val_index], y.loc[val_index]
+        else:
+            X_train, y_train = train[train_index], y[train_index]
+            X_val, y_val = train[val_index], y[val_index]
         model.fit(X_train, y_train)
         oof[val_idx] = model.predict(X_val)
         sub += model.predict(test)/folds.n_splits
